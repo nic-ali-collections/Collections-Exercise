@@ -7,6 +7,7 @@ import java.util.List;
 public class Student {
 
     private String name;
+    private String github;
     private List<Integer> grades;
 
     public Student(String name) {
@@ -14,19 +15,14 @@ public class Student {
         this.grades = new ArrayList<>();
     }
 
-    public String getName() {
-        return name;
+    public String getGithub(){return github;}
+    public void setGithub(String github){
+        this.github = github;
     }
 
     public void addGrade(int grade){
         this.grades.add(grade);
     }
-
-    public List<Integer> getGrades() {
-        return grades;
-    }
-
-
 
     public double getGradeAverage() {
         int total = 0;
@@ -38,13 +34,9 @@ public class Student {
     public static void main(String[] args) {
 
         Student student = new Student("Nic");
-
-        student.addGrade(34);
-
+        student.addGrade(84);
         student.addGrade(67);
-
-        student.addGrade(78);
-
+        student.addGrade(81);
         System.out.println(student.getGradeAverage());
     }
 }

@@ -19,21 +19,28 @@ public class GradesApplication {
         studentOne.addGrade(75);
         studentOne.addGrade(86);
         studentOne.addGrade(97);
+        studentOne.setGithub("dereknoblej");
 
         Student studentTwo = new Student("ricky");
         studentTwo.addGrade(84);
         studentTwo.addGrade(87);
         studentTwo.addGrade(79);
+        studentTwo.setGithub("ricky-Davis");
+
 
         Student studentThree = new Student("josh");
         studentThree.addGrade(65);
         studentThree.addGrade(78);
         studentThree.addGrade(97);
+        studentThree.setGithub("josh-rms");
+
 
         Student studentFour = new Student("Ali");
         studentFour.addGrade(85);
         studentFour.addGrade(91);
         studentFour.addGrade(94);
+        studentFour.setGithub("abaraka210");
+
 
         GradesApplication gradesApplication = new GradesApplication();
         gradesApplication.addStudent("Derek", studentOne);
@@ -59,7 +66,7 @@ public class GradesApplication {
                 if (userChoice.equals(key)) {
                     Student student = students.get(key);
                     System.out.println("Username: " + key);
-                    System.out.println();
+                    System.out.println("GitHub name: " + student.getGithub());
                     System.out.println("Grade average: " + student.getGradeAverage());
                     studentFound = true;
                 }
